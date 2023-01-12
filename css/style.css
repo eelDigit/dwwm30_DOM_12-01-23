@@ -1,0 +1,17 @@
+h1 {
+    color: blue
+}
+
+button {
+    width: 100px;
+    height: 50px;
+}
+
+/* .box {
+    background-color: aqua;
+} */
+
+p {
+    visibility: hidden;
+   
+}
