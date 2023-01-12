@@ -13,5 +13,20 @@ button {
 
 p {
     visibility: hidden;
-   
+}
+/* .show_response {
+    visibility: visible;
+    font-size: large;
+} */
+
+.bad_response {
+    visibility: visible;
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+}
+.good_response {
+    visibility: visible;
+    background-color: green;
+    color: white;
 }
