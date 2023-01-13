@@ -28,7 +28,7 @@
 // ===================================================
 
 const title = document.querySelector("h1");
-console.log(title);
+// console.log(title);
 
 
 // const btn1 = document.querySelector("#btn-1");
@@ -98,14 +98,14 @@ btn2.addEventListener('click', () => {
 
 
 let unText = "voici un texte ";
-console.log(unText);
+// console.log(unText);
 let number = 12;
 number = 65;
-console.log(number);
+// console.log(number);
 let boulean = true;
 let boulean1 = false;
 let array = ["je", "suis", 24, true]//tableau
-console.log(array[2]);
+// console.log(array[2]);
 
 let object = {
     prenom: "christian",
@@ -116,14 +116,137 @@ let object = {
         num: 5
     }
 }
-console.log(typeof array); // les arrays sont des objects en JS.
+// console.log(typeof array); // les arrays sont des objects en JS.
 
 // console.log(object.prenom);
 // console.log(object.address.ville);
 // console.log(object.address);
 
 let fleur; //hundefined
-console.log(fleur);
+// console.log(fleur);
 
 let arbre = null;
-console.log(arbre);
+// console.log(arbre);
+
+// ========================================
+// Operateurs
+// ========================================
+
+
+// console.log(4 + 5);
+// console.log(4 - 5);
+// console.log(4 * 5);
+// console.log(4 / 5);
+// console.log(4 ** 5);
+
+// [opérateurs d'affectation]__________________
+
+let total = 0;
+
+// total = total + 1;
+
+// total++;
+// total++;
+// total++;
+// total++;
+
+// total--;
+// total--;
+// total--;
+// total--;
+// total--;
+
+// --total;
+
+total = 5;
+// total = total + 20;
+total += 5;
+total += 5;
+total += 5;
+total += 5;
+
+total -= 5;
+total -= 5;
+total -= 5;
+
+
+total *= 5;
+total /= 5;
+
+// console.log(total);
+
+
+// ========================================
+// structure de contrôle
+// ========================================
+// let x = 2;
+// let y = 20;
+
+
+// if (x < y) {
+//     console.log("x est inférieur a y");
+// } else {
+//     console.log("x est superieur a y");
+
+// }
+
+// if (x) {
+//     console.log("x existe");
+// }
+
+// if (!x) {
+//     console.log("x n'existe pas");
+// }
+
+// ________________________________
+// if (x !== y) {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
+// __________________________________
+
+let x = 2;
+let y = 2;
+
+if (x === y && x > 5) {
+    console.log("true")
+} else {
+    console.log("false");
+}
+
+
+if (x === y || x > 5) {
+    console.log("true")
+} else {
+    console.log("false");
+}
+
+
+if (x === y || x > 5) {
+    console.log("true")
+} else if (x == y) {
+    console.log("salut");
+} else {
+    console.log("coucou");
+}
+
+// [concatenation ]__________________________
+
+console.log(x + " et " + y + " l'éclaire sont différents");
+
+console.log(x + ' et ' + y + ' l\'éclaire sont différents');
+
+console.log(` 
+${x} et  ${y}   l'éclaire sont différents 
+`);
+
+
+// [ternaire]________________________________
+
+
+if (x === y) console.log(" true ");
+
+x === y ? console.log("true") : console.log("false");
+
+
