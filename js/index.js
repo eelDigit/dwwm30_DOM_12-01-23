@@ -28,6 +28,9 @@
 // ===================================================
 
 const title = document.querySelector("h1");
+console.log(title);
+
+
 // const btn1 = document.querySelector("#btn-1");
 
 
@@ -38,8 +41,10 @@ const title = document.querySelector("h1");
 const questionContainer = document.querySelector(".click-event");
 // const btn1 = document.querySelector("#btn-1");
 const btn1 = document.getElementById("btn-1");
+// console.log(btn1);
 
-const btn2 = document.querySelector("#btn-2");
+// const btn2 = document.querySelector("#btn-2");
+const btn2 = document.getElementById("btn-2");
 
 const bonneReponse = document.querySelector(".p1");
 const mauvaiseReponse = document.querySelector(".p2");
@@ -55,8 +60,11 @@ btn1.addEventListener("click", () => {
     bonneReponse.classList.add("good_response");
     btn1.style.background = "green";
 
+    //    ---[desactive le button 2]------------------
 
-
+    // document.querySelector("#btn-2").disabled = true;
+    btn2.disabled = true;
+    // document.getElementById("btn-2").disabled = true;
 })
 btn2.addEventListener('click', () => {
     // console.log("chat");
@@ -67,6 +75,7 @@ btn2.addEventListener('click', () => {
     // mauvaiseReponse.classList.add("show_response");
     mauvaiseReponse.classList.add("bad_response");
     btn2.style.background = "red";
+
 
 
 })
