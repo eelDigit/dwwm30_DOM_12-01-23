@@ -233,13 +233,13 @@ if (x === y || x > 5) {
 
 // [concatenation ]__________________________
 
-console.log(x + " et " + y + " l'éclaire sont différents");
+// console.log(x + " et " + y + " l'éclaire sont différents");
 
-console.log(x + ' et ' + y + ' l\'éclaire sont différents');
+// console.log(x + ' et ' + y + ' l\'éclaire sont différents');
 
-console.log(` 
-${x} et  ${y}   l'éclaire sont différents 
-`);
+// console.log(` 
+// ${x} et  ${y}   l'éclaire sont différents 
+// `);
 
 
 // [ternaire]________________________________
@@ -250,3 +250,145 @@ if (x === y) console.log(" true ");
 x === y ? console.log("true") : console.log("false");
 
 
+
+
+// ========================================
+// mousemove
+// ========================================
+
+const mouse = document.querySelector(".mouse");
+// console.log(mouse);
+
+
+window.addEventListener("mousemove", (e) => {
+    // console.log(e);
+    // console.log( " x: ",e.pageX,  "y: " , e.pageY);
+    mouse.style.left = e.pageX + "px";
+    // mouse.style.left = e.clientX + "px";
+    // mouse.style.background = "red";
+    mouse.style.top = e.pageY + "px";
+    // mouse.style.top = e.clientY + "px";
+})
+
+window.addEventListener("mousedown", () => {
+
+    // console.log("test");
+    mouse.style.transform = "scale(2)translate(-25%, -25%) ";
+    mouse.style.border = "2px solid yellow"
+
+})
+window.addEventListener("mouseup", () => {
+
+    // console.log("test");
+    mouse.style.transform = "scale(1)translate(-50%, -50%) ";
+    mouse.style.border = "2px solid red";
+
+})
+
+questionContainer.addEventListener("mouseenter", (e) => {
+
+    questionContainer.style.background = "yellow";
+})
+questionContainer.addEventListener("mouseout", () => {
+
+    questionContainer.style.background = "red";
+})
+questionContainer.addEventListener("mouseover", () => {
+
+    questionContainer.style.transform = " rotate(5deg)";
+})
+
+// =============================================
+// keypress
+// =============================================
+
+const keypressContainer = document.querySelector(".keypress");
+// console.log(keypressContainer);
+
+const key = document.getElementById("key");
+//  console.log(key);
+
+
+
+document.addEventListener("keypress", (e) => {
+    console.log(e.key);
+    key.textContent += e.key;
+
+    if (e.key === "j") {
+        keypressContainer.style.background = "yellow";
+    } else if (e.key === "b") {
+        keypressContainer.style.background = "blue";
+
+    } else {
+        keypressContainer.style.background = "green";
+
+    }
+
+
+    if (e.key === "k") ring(e.key);
+
+
+})
+
+
+const ring = () => {
+
+    const audio = new Audio();
+
+    audio.src = "./assets/sound/k.mp3";
+    audio.src = "./k.mp3";
+    audio.play();
+    console.log("testttttttttttttt");
+}
+
+// ===================================================
+// formulaire
+// =================================================
+const inputName = document.querySelector('input[type="text"] ');
+// console.log(inputName);
+let pseudo = "";
+
+inputName.addEventListener('input', (e) => {
+    // console.log(e.target.value);
+    pseudo = e.target.value;
+    console.log(pseudo);
+})
+
+
+console.log(pseudo);
+
+// pour le langage 
+const select = document.querySelector("select");
+console.log(select);
+let language = "";
+
+select.addEventListener('input', (e) => {
+    // console.log(e);
+    // console.log(e.target.value);
+
+    language = e.target.value
+    // console.log(langage);
+})
+
+
+const form = document.querySelector("form");
+console.log(form);
+form.addEventListener("submit", (e) => {
+    //   console.log("test");
+
+    e.preventDefault();
+    //   console.log("test");
+
+    if (cgv.checked) {
+
+        document.querySelector("form > div").innerHTML = `
+    <h3>pseudo : ${pseudo} </h3>
+<h4> language : ${language} </h4> 
+    
+    `;
+
+    } else {
+        alert("veuillez accepter les CVG");
+    }
+
+});

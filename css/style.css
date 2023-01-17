@@ -30,3 +30,13 @@ p {
     background-color: green;
     color: white;
 }
+.mouse {
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.2s;
+    z-index: -1;
+    transform: translate(-50% , -50%);
+}

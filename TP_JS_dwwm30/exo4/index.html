@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="output">
+    <span id="mascot"><img src="img/cheval.jpg" alt="Photo de cheval" /></span>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
+
+<!-- ----------------------------------------- -->
+
+<!-- Ne pas modifier le fichier HTML -->
+
+<!-- Exercice 4
+  Au sein du <div id="output"> se trouve un <span id="mascot"> hébergeant un cheval. Il faudrait remplacer ce <span> par la structure suivante, en HTML5:
+
+<figure>
+    <img src="img/chaton.jpg" alt="Photo de chat" /> +
+    <figcaption>Photo de chat</figcaption>
+</figure>
+
+
+
+ps : utiliser : 
+
+
+let chat = document.getElementById("mascot"),figure;
+
+if (chat) {
+ -----
+ -----
+ -----
+ -----
+
+  chat.parentNode.replaceChild(figure, chat);
+}
+
+
+PS: innerHTML , createElement sont vos amis.
